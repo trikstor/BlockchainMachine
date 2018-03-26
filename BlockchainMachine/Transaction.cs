@@ -14,5 +14,8 @@ namespace BlockchainMachine
             Poll = poll;
             Option = option;
         }
+
+        public override string ToString() =>
+            $"Vote: from: {Sender} to: [{Poll} option: {Option}]";
     }
 }
