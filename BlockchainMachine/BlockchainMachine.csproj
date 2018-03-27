@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Block.cs" />
+    <Compile Include="Chain.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provider.cs" />
+    <Compile Include="BlockChain.cs" />
+    <Compile Include="Tests\BlockChainShould.cs" />
     <Compile Include="Tests\BlockShould.cs" />
     <Compile Include="Transaction.cs" />
   </ItemGroup>

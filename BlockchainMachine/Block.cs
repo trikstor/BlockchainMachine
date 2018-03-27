@@ -20,7 +20,8 @@ namespace BlockchainMachine
             PreviousHash = previousHash;
         }
 
-        public bool IsInBlock(Guid userToken) => Transactions.Any(transaction => transaction.Sender == userToken);
+        public bool IsInBlock(Guid userToken, Guid poll) =>
+            Transactions.Any(transaction => transaction.Sender == userToken && transaction.Poll == poll);
 
         public override string ToString()
         {
