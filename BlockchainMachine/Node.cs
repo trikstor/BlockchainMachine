@@ -4,9 +4,9 @@ namespace BlockchainMachine
 {
     public class Node
     {
-        public Guid UserToken { get; }
+        public string UserToken { get; }
 
-        public Node(Guid userToken)
+        public Node(string userToken)
         {
             UserToken = userToken;
         }

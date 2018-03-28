@@ -20,8 +20,21 @@ namespace BlockchainMachine
             PreviousHash = previousHash;
         }
 
-        public bool IsInBlock(Guid userToken, Guid poll) =>
+        public bool IsInBlock(string userToken, Guid poll) =>
             Transactions.Any(transaction => transaction.Sender == userToken && transaction.Poll == poll);
+
+        public bool TryRemove(string userToken, Guid poll)
+        {
+            foreach (var transaction in Transactions)
+            {
+                if (transaction.Sender == userToken && transaction.Poll == poll)
+                {
+                    Transactions.Remove(transaction);
+                    return true;
+                }
+            }
+            return false;
+        }
 
         public override string ToString()
         {

@@ -4,11 +4,11 @@ namespace BlockchainMachine
 {
     public class Transaction
     {
-        public Guid Sender { get; }
+        public string Sender { get; }
         public Guid Poll { get; }
         public int Option { get; }
 
-        public Transaction(Guid sender, Guid poll, int option)
+        public Transaction(string sender, Guid poll, int option)
         {
             Sender = sender;
             Poll = poll;
